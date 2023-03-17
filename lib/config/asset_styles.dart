@@ -17,7 +17,7 @@ class AssetStyle {
   );
   static const TextStyle textLabel = TextStyle(
     fontFamily: 'Lato',
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: FontWeight.bold,
     color: Colors.white,
   );

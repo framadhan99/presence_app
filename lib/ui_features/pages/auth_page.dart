@@ -1,12 +1,11 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class AuthPage extends StatelessWidget {
+  const AuthPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Placeholder();
   }
 }
