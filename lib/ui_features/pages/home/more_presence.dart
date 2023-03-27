@@ -11,7 +11,10 @@ class MorePresenceScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarCustom(title: 'PRESENCE'),
+      appBar: const AppBarCustom(
+        title: 'PRESENCE',
+        onTap: backScreen,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: ListView.builder(
