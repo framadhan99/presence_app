@@ -4,6 +4,7 @@ import 'package:presence_app/config/asset_styles.dart';
 import 'package:presence_app/config/navigations_service.dart';
 import 'package:presence_app/config/ui_helper.dart';
 import 'package:presence_app/ui_features/pages/home/detail_presence_screen.dart';
+import 'package:presence_app/ui_features/pages/home/more_presence.dart';
 import 'package:presence_app/ui_features/widgets/buttons/button_primary.dart';
 import 'package:presence_app/ui_features/widgets/cards/card_general.dart';
 import 'package:presence_app/ui_features/widgets/cards/card_presence.dart';
@@ -104,10 +105,13 @@ class HomePage extends StatelessWidget {
                       'Last 5 Day',
                       style: AssetStyle.textPrimary,
                     ),
-                    Text('See more',
-                        style: AssetStyle.textPrimary.copyWith(
-                          color: AssetColor.blue,
-                        )),
+                    GestureDetector(
+                      onTap: () => nextScreen(const MorePresenceScreen()),
+                      child: Text('See more',
+                          style: AssetStyle.textPrimary.copyWith(
+                            color: AssetColor.blue,
+                          )),
+                    ),
                   ],
                 ),
               ),

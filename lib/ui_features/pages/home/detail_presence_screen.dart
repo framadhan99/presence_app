@@ -17,9 +17,9 @@ class DetailPresenceScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
         child: CardGeneral(
-          height: 200,
+          height: 250,
           margin: const EdgeInsets.only(bottom: 10),
-          padding: const EdgeInsets.only(left: 20, top: 15, bottom: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
           widget: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -78,6 +78,17 @@ class DetailPresenceScreen extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
+              Spacer(),
+              Container(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Friday, March 17 2023',
+                  style: AssetStyle.textPrimary.copyWith(
+                      color: AssetColor.blueDrak,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14),
+                ),
+              )
             ],
           ),
         ),
