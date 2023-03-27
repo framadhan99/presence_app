@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:presence_app/config/asset_colors.dart';
 import 'package:presence_app/config/asset_styles.dart';
+import 'package:presence_app/config/navigations_service.dart';
 import 'package:presence_app/config/ui_helper.dart';
+import 'package:presence_app/ui_features/pages/home/detail_presence_screen.dart';
 import 'package:presence_app/ui_features/widgets/buttons/button_primary.dart';
 import 'package:presence_app/ui_features/widgets/cards/card_general.dart';
 import 'package:presence_app/ui_features/widgets/cards/card_presence.dart';
@@ -112,6 +114,7 @@ class HomePage extends StatelessWidget {
               ...[1, 2, 3, 4, 5].map(
                 (e) {
                   return CardGeneral(
+                      onTap: () => nextScreen(const DetailPresenceScreen()),
                       margin: const EdgeInsets.only(bottom: 10),
                       padding:
                           const EdgeInsets.only(left: 20, top: 15, bottom: 15),
