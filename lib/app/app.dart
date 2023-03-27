@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:presence_app/config/navigations_service.dart';
-import 'package:presence_app/ui_features/pages/home/home_page.dart';
+import 'package:presence_app/ui_features/pages/dashboard_screen.dart';
 import 'app_theme.dart';
 
 class App extends StatelessWidget {
@@ -13,7 +13,7 @@ class App extends StatelessWidget {
       theme: theme,
       debugShowCheckedModeBanner: false,
       navigatorKey: navigatorKey,
-      home: HomePage(),
+      home: DashboardMainScreen(),
     );
   }
 }

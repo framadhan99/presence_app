@@ -58,7 +58,7 @@ class HomePage extends StatelessWidget {
                   Text(
                     '07052022  23072001',
                     style: AssetStyle.textTitle.copyWith(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 32,
                     ),
                   ),
@@ -87,7 +87,74 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
+              ),
+              verticalSpace(20),
+              Divider(
+                color: Colors.grey,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 25),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Last 5 Day',
+                      style: AssetStyle.textPrimary,
+                    ),
+                    Text('See more',
+                        style: AssetStyle.textPrimary.copyWith(
+                          color: AssetColor.blue,
+                        )),
+                  ],
+                ),
+              ),
+              ...[1, 2, 3, 4, 5].map(
+                (e) {
+                  return Container(
+                    margin: const EdgeInsets.only(bottom: 10),
+                    padding:
+                        const EdgeInsets.only(left: 15, top: 15, bottom: 15),
+                    height: 120,
+                    width: screenWidth(context),
+                    decoration: BoxDecoration(
+                      color: AssetColor.blueLight,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Masuk',
+                          style: AssetStyle.textPrimary.copyWith(
+                            color: AssetColor.blueDrak,
+                          ),
+                        ),
+                        Text(
+                          '2022-03-2023 07:30:20',
+                          style: AssetStyle.textPrimary.copyWith(
+                            color: AssetColor.blueDraked,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        const Spacer(),
+                        Text(
+                          'Keluar',
+                          style: AssetStyle.textPrimary.copyWith(
+                            color: AssetColor.blueDrak,
+                          ),
+                        ),
+                        Text(
+                          '2022-03-2023 06:00:00',
+                          style: AssetStyle.textPrimary.copyWith(
+                            color: AssetColor.blueDraked,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ).toList(),
             ],
           ),
         ),
