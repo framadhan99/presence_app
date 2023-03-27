@@ -3,6 +3,7 @@ import 'package:presence_app/config/asset_colors.dart';
 import 'package:presence_app/config/asset_styles.dart';
 import 'package:presence_app/config/ui_helper.dart';
 import 'package:presence_app/ui_features/widgets/buttons/button_primary.dart';
+import 'package:presence_app/ui_features/widgets/cards/card_general.dart';
 import 'package:presence_app/ui_features/widgets/cards/card_presence.dart';
 import 'package:presence_app/ui_features/widgets/img/img_avatar.dart';
 
@@ -89,7 +90,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               verticalSpace(20),
-              Divider(
+              const Divider(
                 color: Colors.grey,
               ),
               Container(
@@ -97,7 +98,7 @@ class HomePage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       'Last 5 Day',
                       style: AssetStyle.textPrimary,
                     ),
@@ -110,49 +111,42 @@ class HomePage extends StatelessWidget {
               ),
               ...[1, 2, 3, 4, 5].map(
                 (e) {
-                  return Container(
-                    margin: const EdgeInsets.only(bottom: 10),
-                    padding:
-                        const EdgeInsets.only(left: 15, top: 15, bottom: 15),
-                    height: 120,
-                    width: screenWidth(context),
-                    decoration: BoxDecoration(
-                      color: AssetColor.blueLight,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Masuk',
-                          style: AssetStyle.textPrimary.copyWith(
-                            color: AssetColor.blueDrak,
+                  return CardGeneral(
+                      margin: const EdgeInsets.only(bottom: 10),
+                      padding:
+                          const EdgeInsets.only(left: 20, top: 15, bottom: 15),
+                      widget: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Masuk',
+                            style: AssetStyle.textPrimary.copyWith(
+                              color: AssetColor.blueDrak,
+                            ),
                           ),
-                        ),
-                        Text(
-                          '2022-03-2023 07:30:20',
-                          style: AssetStyle.textPrimary.copyWith(
-                            color: AssetColor.blueDraked,
-                            fontWeight: FontWeight.w500,
+                          Text(
+                            '2022-03-2023 07:30:20',
+                            style: AssetStyle.textPrimary.copyWith(
+                              color: AssetColor.blueDraked,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
-                        ),
-                        const Spacer(),
-                        Text(
-                          'Keluar',
-                          style: AssetStyle.textPrimary.copyWith(
-                            color: AssetColor.blueDrak,
+                          const Spacer(),
+                          Text(
+                            'Keluar',
+                            style: AssetStyle.textPrimary.copyWith(
+                              color: AssetColor.blueDrak,
+                            ),
                           ),
-                        ),
-                        Text(
-                          '2022-03-2023 06:00:00',
-                          style: AssetStyle.textPrimary.copyWith(
-                            color: AssetColor.blueDraked,
-                            fontWeight: FontWeight.w500,
+                          Text(
+                            '2022-03-2023 06:00:00',
+                            style: AssetStyle.textPrimary.copyWith(
+                              color: AssetColor.blueDraked,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  );
+                        ],
+                      ));
                 },
               ).toList(),
             ],
