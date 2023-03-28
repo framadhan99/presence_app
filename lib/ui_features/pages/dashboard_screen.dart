@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:presence_app/config/asset_colors.dart';
 import 'package:presence_app/ui_features/pages/home/home_page.dart';
+import 'package:presence_app/ui_features/pages/profile/profile_screen.dart';
 
 class DashboardMainScreen extends StatefulWidget {
   const DashboardMainScreen({super.key});
@@ -15,7 +16,7 @@ class _DashboardMainScreenState extends State<DashboardMainScreen> {
   List<Widget> listScreen = [
     const HomePage(),
     Text('Finger Print'),
-    Text('Profile'),
+    const ProfileScreen(),
   ];
 
   @override
