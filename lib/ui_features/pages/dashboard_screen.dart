@@ -15,7 +15,7 @@ class _DashboardMainScreenState extends State<DashboardMainScreen> {
 
   List<Widget> listScreen = [
     const HomePage(),
-    Text('Finger Print'),
+    const Text('Finger Print'),
     const ProfileScreen(),
   ];
 
@@ -26,7 +26,17 @@ class _DashboardMainScreenState extends State<DashboardMainScreen> {
         currentIndex: _index,
         onTap: (value) {
           setState(() {
-            _index = value;
+            if (value == 1) {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  backgroundColor: AssetColor.blueLight,
+                  content: Text('TERIMAKSIH SUDAH ABSEN'),
+                ),
+              );
+            } else {
+              _index = value;
+            }
           });
         },
         backgroundColor: AssetColor.blueDrak,
