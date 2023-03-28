@@ -5,18 +5,16 @@ import 'package:presence_app/config/asset_styles.dart';
 class ButtonPrimary extends StatelessWidget {
   final String text;
   final Function() ontap;
-  const ButtonPrimary({
-    super.key,
-    required this.text,
-    required this.ontap,
-  });
+  final double? height;
+  const ButtonPrimary(
+      {super.key, required this.text, required this.ontap, this.height});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: ontap,
       child: Container(
-        height: 35,
+        height: height ?? 35,
         width: 150,
         decoration: BoxDecoration(
           color: AssetColor.blueDrak,

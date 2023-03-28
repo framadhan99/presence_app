@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:presence_app/config/config.dart';
 import 'package:presence_app/config/navigations_service.dart';
+import 'package:presence_app/ui_features/pages/profile/update_profile.dart';
+import 'package:presence_app/ui_features/pages/profile/update_screen.dart';
 import 'package:presence_app/ui_features/widgets/appbar/appbar_custom.dart';
 import 'package:presence_app/ui_features/widgets/img/img_avatar.dart';
 
@@ -12,7 +14,9 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: const AppBarCustom(
         title: 'PROFILE',
-        onTap: backScreen,
+        widget: SizedBox(
+          width: 30,
+        ),
       ),
       body: Column(
         children: [
@@ -50,20 +54,26 @@ class ProfileScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text(
-                    'Update Profile',
-                    style: AssetStyle.textPrimary.copyWith(
-                        color: AssetColor.blueDrak,
-                        fontWeight: FontWeight.w500),
+                  GestureDetector(
+                    onTap: () => nextScreen(const UpdateProfileScreen()),
+                    child: Text(
+                      'Update Profile',
+                      style: AssetStyle.textPrimary.copyWith(
+                          color: AssetColor.blueDrak,
+                          fontWeight: FontWeight.w500),
+                    ),
                   ),
                   const Divider(
                     color: Colors.grey,
                   ),
-                  Text(
-                    'Update Password',
-                    style: AssetStyle.textPrimary.copyWith(
-                        color: AssetColor.blueDrak,
-                        fontWeight: FontWeight.w500),
+                  GestureDetector(
+                    onTap: () => nextScreen(const UpdatePasswordScreen()),
+                    child: Text(
+                      'Update Password',
+                      style: AssetStyle.textPrimary.copyWith(
+                          color: AssetColor.blueDrak,
+                          fontWeight: FontWeight.w500),
+                    ),
                   ),
                   const Divider(
                     color: Colors.grey,

@@ -3,9 +3,10 @@ import 'package:presence_app/config/asset_styles.dart';
 import 'package:presence_app/config/config.dart';
 
 class AppBarCustom extends StatelessWidget with PreferredSizeWidget {
-  const AppBarCustom({super.key, required this.title, this.onTap});
+  const AppBarCustom({super.key, required this.title, this.onTap, this.widget});
   final String title;
   final Function()? onTap;
+  final Widget? widget;
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +17,11 @@ class AppBarCustom extends StatelessWidget with PreferredSizeWidget {
           children: [
             GestureDetector(
               onTap: onTap,
-              child: const Icon(
-                Icons.arrow_back,
-                size: 30,
-              ),
+              child: widget ??
+                  const Icon(
+                    Icons.arrow_back,
+                    size: 30,
+                  ),
             ),
             const Spacer(),
             Text(
