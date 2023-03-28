@@ -29,7 +29,7 @@ class _DashboardMainScreenState extends State<DashboardMainScreen> {
             if (value == 1) {
               showDialog(
                 context: context,
-                builder: (context) => AlertDialog(
+                builder: (context) => const AlertDialog(
                   backgroundColor: AssetColor.blueLight,
                   content: Text('TERIMAKSIH SUDAH ABSEN'),
                 ),
