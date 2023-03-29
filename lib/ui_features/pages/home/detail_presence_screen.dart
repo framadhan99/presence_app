@@ -78,7 +78,7 @@ class DetailPresenceScreen extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Container(
                 alignment: Alignment.centerRight,
                 child: Text(

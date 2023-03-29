@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
-Timer? _loaderTimer;
 
 Future<T?> nextScreen<T extends Object?>(Widget screen) async {
   return await navigatorKey.currentState!

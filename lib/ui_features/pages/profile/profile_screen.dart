@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:presence_app/config/config.dart';
 import 'package:presence_app/config/navigations_service.dart';
+import 'package:presence_app/ui_features/pages/profile/add_officer_screen.dart';
+import 'package:presence_app/ui_features/pages/profile/update_pass_screen.dart';
 import 'package:presence_app/ui_features/pages/profile/update_profile.dart';
-import 'package:presence_app/ui_features/pages/profile/update_screen.dart';
 import 'package:presence_app/ui_features/widgets/appbar/appbar_custom.dart';
 import 'package:presence_app/ui_features/widgets/img/img_avatar.dart';
 
@@ -73,6 +74,35 @@ class ProfileScreen extends StatelessWidget {
                       style: AssetStyle.textPrimary.copyWith(
                           color: AssetColor.blueDrak,
                           fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  const Divider(
+                    color: Colors.grey,
+                  ),
+                  GestureDetector(
+                    onTap: () => nextScreen(const AddOfficerScreen()),
+                    child: Row(
+                      children: [
+                        Text(
+                          'Add Officer',
+                          style: AssetStyle.textPrimary.copyWith(
+                              color: AssetColor.blueDrak,
+                              fontWeight: FontWeight.w500),
+                        ),
+                        horizontalSpace(5),
+                        const Icon(
+                          Icons.key,
+                          color: AssetColor.blueLight,
+                        ),
+                        horizontalSpace(5),
+                        Text(
+                          'Admin Only',
+                          style: AssetStyle.textPrimary.copyWith(
+                              color: AssetColor.blueLight,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ],
                     ),
                   ),
                   const Divider(

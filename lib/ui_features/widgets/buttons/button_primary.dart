@@ -6,8 +6,17 @@ class ButtonPrimary extends StatelessWidget {
   final String text;
   final Function() ontap;
   final double? height;
-  const ButtonPrimary(
-      {super.key, required this.text, required this.ontap, this.height});
+  final double? width;
+  final Color? color;
+
+  const ButtonPrimary({
+    super.key,
+    required this.text,
+    required this.ontap,
+    this.height,
+    this.width,
+    this.color,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +24,9 @@ class ButtonPrimary extends StatelessWidget {
       onTap: ontap,
       child: Container(
         height: height ?? 35,
-        width: 150,
+        width: width ?? 150,
         decoration: BoxDecoration(
-          color: AssetColor.blueDrak,
+          color: color ?? AssetColor.blueDrak,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Center(

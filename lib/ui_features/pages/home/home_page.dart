@@ -44,8 +44,8 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   const ImageAvatar(
-                    height: 65,
-                    width: 65,
+                    height: 50,
+                    width: 50,
                     image: 'assets/images/avatar.png',
                   ),
                 ],
@@ -97,7 +97,7 @@ class HomePage extends StatelessWidget {
                 color: Colors.grey,
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 25),
+                margin: const EdgeInsets.only(bottom: 25),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

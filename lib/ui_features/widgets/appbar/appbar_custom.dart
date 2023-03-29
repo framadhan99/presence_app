@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:presence_app/config/asset_styles.dart';
 import 'package:presence_app/config/config.dart';
 
 class AppBarCustom extends StatelessWidget with PreferredSizeWidget {
-  const AppBarCustom({super.key, required this.title, this.onTap, this.widget});
+  const AppBarCustom({
+    super.key,
+    required this.title,
+    this.onTap,
+    this.widget,
+    this.action,
+  });
   final String title;
   final Function()? onTap;
   final Widget? widget;
+  final Widget? action;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +35,7 @@ class AppBarCustom extends StatelessWidget with PreferredSizeWidget {
               style: AssetStyle.textTitle,
             ),
             const Spacer(),
-            horizontalSpace(30)
+            action ?? horizontalSpace(30)
           ],
         ),
       ),

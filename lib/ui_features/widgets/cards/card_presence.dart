@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:presence_app/config/asset_colors.dart';
-import 'package:presence_app/config/asset_styles.dart';
-import 'package:presence_app/config/ui_helper.dart';
 
 class CardPresence extends StatelessWidget {
   final double height;
   final double width;
+  // ignore: prefer_typing_uninitialized_variables
   final children;
   const CardPresence({
     super.key,
