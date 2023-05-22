@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:presence_app/config/config.dart';
 import 'package:presence_app/config/navigations_service.dart';
 import 'package:presence_app/ui_features/pages/authentication/forgot_pass_screen.dart';
+import 'package:presence_app/ui_features/pages/dashboard_screen.dart';
+import 'package:presence_app/ui_features/pages/home/home_page.dart';
 import 'package:presence_app/ui_features/widgets/buttons/button_primary.dart';
 import 'package:presence_app/ui_features/widgets/input/input_login.dart';
 
@@ -50,7 +52,7 @@ class LoginScreen extends StatelessWidget {
               child: ButtonPrimary(
                 color: AssetColor.blue,
                 text: 'Log in',
-                ontap: () {},
+                ontap: () => nextScreen(const DashboardMainScreen()),
               ),
             ),
           ],

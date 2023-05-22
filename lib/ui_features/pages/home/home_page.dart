@@ -8,6 +8,7 @@ import 'package:presence_app/ui_features/pages/home/more_presence.dart';
 import 'package:presence_app/ui_features/widgets/buttons/button_primary.dart';
 import 'package:presence_app/ui_features/widgets/cards/card_general.dart';
 import 'package:presence_app/ui_features/widgets/cards/card_presence.dart';
+import 'package:presence_app/ui_features/widgets/dialog/dialog_general.dart';
 import 'package:presence_app/ui_features/widgets/img/img_avatar.dart';
 
 class HomePage extends StatelessWidget {
@@ -76,7 +77,13 @@ class HomePage extends StatelessWidget {
                   children: [
                     ButtonPrimary(
                       text: 'MASUK',
-                      ontap: () {},
+                      ontap: () {
+                        showDialog(
+                            context: context,
+                            builder: (context) => const DialogGeneral(
+                                  text: 'Masuk\n Silahkan Tekan Fingerprint',
+                                ));
+                      },
                     ),
                     Text(
                       '|',
@@ -87,7 +94,13 @@ class HomePage extends StatelessWidget {
                     ),
                     ButtonPrimary(
                       text: 'KELUAR',
-                      ontap: () {},
+                      ontap: () {
+                        showDialog(
+                            context: context,
+                            builder: (context) => const DialogGeneral(
+                                  text: 'Keluar\n Silahkan Tekan Fingerprint',
+                                ));
+                      },
                     ),
                   ],
                 ),

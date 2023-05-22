@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:presence_app/config/asset_colors.dart';
 import 'package:presence_app/ui_features/pages/home/home_page.dart';
 import 'package:presence_app/ui_features/pages/profile/profile_screen.dart';
+import 'package:presence_app/ui_features/widgets/dialog/dialog_general.dart';
 
 class DashboardMainScreen extends StatefulWidget {
   const DashboardMainScreen({super.key});
@@ -28,12 +29,9 @@ class _DashboardMainScreenState extends State<DashboardMainScreen> {
           setState(() {
             if (value == 1) {
               showDialog(
-                context: context,
-                builder: (context) => const AlertDialog(
-                  backgroundColor: AssetColor.blueLight,
-                  content: Text('TERIMAKSIH SUDAH ABSEN'),
-                ),
-              );
+                  context: context,
+                  builder: (context) =>
+                      const DialogGeneral(text: 'Absensi Berhasil'));
             } else {
               _index = value;
             }
